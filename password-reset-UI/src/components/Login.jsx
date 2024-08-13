@@ -3,6 +3,7 @@ import axios from 'axios';
 import { Form, Button, Card, Container} from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import toast from 'react-hot-toast';
+import config from '../utils/config';
 
 function Login() {
     let [email, setEmail] = useState("")
@@ -10,7 +11,7 @@ function Login() {
   
     const handleLogin = async() =>{
       try {
-        let res = await axios.post("https://password-reset-flow-1y0d.onrender.com/user/login", {email, password}) 
+        let res = await axios.post(`${config.API_URL}/user/login`, {email, password}) 
         if(res.status === 200){
             console.log(res.data.message)
             toast.success(res.data.message)

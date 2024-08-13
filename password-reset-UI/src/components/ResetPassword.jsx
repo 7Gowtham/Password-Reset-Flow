@@ -4,6 +4,7 @@ import { Form, Button, Card, Container} from 'react-bootstrap';
 import axios from 'axios'
 import toast from 'react-hot-toast';
 import { useNavigate } from 'react-router-dom';
+import config from '../utils/config';
 
 function ResetPassword() {
   const [password, setPassword] = useState("")
@@ -18,7 +19,7 @@ function ResetPassword() {
       return;
     }
     try {
-      let res = await axios.post(`https://password-reset-flow-1y0d.onrender.com/user/reset-password/${token}`, {password})
+      let res = await axios.post(`${config.API_URL}/user/reset-password/${token}`, {password})
       if(res.status === 200){
         toast.success('Password reset successful')
         navigate('/login');

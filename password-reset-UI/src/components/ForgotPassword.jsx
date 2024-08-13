@@ -2,13 +2,14 @@ import React, { useState } from 'react'
 import { Form, Button, Card, Container} from 'react-bootstrap';
 import axios from 'axios'
 import toast from 'react-hot-toast';
+import config from '../utils/config';
 
 function ForgotPassword() {
   const [email, setEmail] = useState("")
 
   const handleSubmit = async()=>{
     try {
-      let res = await axios.post("https://password-reset-flow-1y0d.onrender.com/user/forgot-password", {email})
+      let res = await axios.post(`${config.API_URL}/user/forgot-password`, {email})
       if(res.status === 200){
         toast.success('Password reset email sent')
       }
