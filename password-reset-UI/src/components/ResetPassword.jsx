@@ -18,7 +18,7 @@ function ResetPassword() {
       return;
     }
     try {
-      let res = await axios.post(`http://localhost:5000/user/reset-password/${token}`, {password})
+      let res = await axios.post(`https://password-reset-flow-1y0d.onrender.com/user/reset-password/${token}`, {password})
       if(res.status === 200){
         toast.success('Password reset successful')
         navigate('/login');

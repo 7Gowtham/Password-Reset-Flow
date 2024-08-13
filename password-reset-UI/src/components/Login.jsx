@@ -10,7 +10,7 @@ function Login() {
   
     const handleLogin = async() =>{
       try {
-        let res = await axios.post("http://localhost:5000/user/login", {email, password}) 
+        let res = await axios.post("https://password-reset-flow-1y0d.onrender.com/user/login", {email, password}) 
         if(res.status === 200){
             console.log(res.data.message)
             toast.success(res.data.message)

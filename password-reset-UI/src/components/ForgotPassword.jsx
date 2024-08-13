@@ -8,7 +8,7 @@ function ForgotPassword() {
 
   const handleSubmit = async()=>{
     try {
-      let res = await axios.post("http://localhost:5000/user/forgot-password", {email})
+      let res = await axios.post("https://password-reset-flow-1y0d.onrender.com/user/forgot-password", {email})
       if(res.status === 200){
         toast.success('Password reset email sent')
       }
