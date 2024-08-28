@@ -19,7 +19,7 @@ function ResetPassword() {
       return;
     }
     try {
-      let res = await axios.post(`${config.API_URL}/user/reset-password/${token}`, {password})
+      let res = await axios.post(`${config.API_URL}/user/reset-password/${token}`, {password, confirmPassword})
       if(res.status === 200){
         toast.success('Password reset successful')
         navigate('/login');
