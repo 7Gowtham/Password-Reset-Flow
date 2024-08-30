@@ -23,7 +23,7 @@ const hashCompare = async(password, hashPassword) =>{
 
 const createToken = async(payload)=>{
     try {
-        return await jwt.sign(payload, process.env.JWT_SECRET,{expiresIn: '1h'})
+        return await jwt.sign(payload, process.env.JWT_SECRET,{expiresIn: '30m'})
     } catch (error) {
         throw error
     }

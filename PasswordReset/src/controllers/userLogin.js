@@ -102,7 +102,7 @@ const forgotPassword = async(req, res)=>{
                     from: process.env.EMAIL_USER,
                     to: user.email,
                     subject: "Password Reset",
-                    text: `You requested for a password reset. Click here: https://main--passwd-reset7.netlify.app/user/reset-password/${token}`
+                    text: `You requested for a password reset. Click here: https://password-reset-flow7.vercel.app/user/reset-password/${token}`
                 })
                 console.log("Message sent: %s", info.messageId);
             }
