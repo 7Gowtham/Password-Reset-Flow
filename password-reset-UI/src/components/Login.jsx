@@ -33,7 +33,7 @@ function Login() {
 
           <Form.Group className="mb-3" controlId="formPassword">
             <Form.Label>Password</Form.Label>
-            <Form.Control type="password" placeholder="Enter password" required onChange={(e)=>setPassword(e.target.value)}/>
+            <Form.Control type="password" placeholder="Enter password" autocomplete="current-password" required onChange={(e)=>setPassword(e.target.value)}/>
           </Form.Group>
 
           <Button variant="primary" onClick={handleLogin} className="w-100">
