@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import toast from 'react-hot-toast'
 import { Form, Button, Card, Container } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
+import config from '../utils/config';
 
 function Register() {
     let [name, setName] = useState("")
@@ -19,14 +20,7 @@ function Register() {
                 navigate('/login');
             }
         } catch (error) {
-            console.log(error)
-            if (error.response && error.response.data) {
-                toast.error(error.response.data.message);
-            } else if (error.request) {
-                toast.error('No response from the server. Please try again later.');
-            } else {
-                toast.error('An error occurred. Please try again.');
-            }
+            toast.error(error.response.data.message)
         }
     }
     return <>
