@@ -19,6 +19,7 @@ function Register() {
                 navigate('/login');
             }
         } catch (error) {
+            console.log(error)
             if (error.response && error.response.data) {
                 toast.error(error.response.data.message);
             } else if (error.request) {
