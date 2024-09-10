@@ -45,6 +45,11 @@ function Login() {
               Forgot Password?
             </Link>
           </div>
+          <div className="text-center mt-3">
+            <Link to="/user/create" className="text-decoration-none">
+              Register?
+            </Link>
+          </div>
         </Form>
       </Card>
     </Container>
