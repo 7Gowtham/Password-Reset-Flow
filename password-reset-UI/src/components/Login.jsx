@@ -26,8 +26,8 @@ function Login() {
       <Card style={{ width: '22rem' }} className="p-4 shadow-sm">
         <h2 className="text-center mb-4">Login</h2>
         <Form>
-          <Form.Group className="mb-3" controlId="formUsername">
-            <Form.Label>Username</Form.Label>
+          <Form.Group className="mb-3" controlId="formemail">
+            <Form.Label>Email</Form.Label>
             <Form.Control type="text" placeholder="Enter email" required onChange={(e)=>setEmail(e.target.value)}/>
           </Form.Group>
 
