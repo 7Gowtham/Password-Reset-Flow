@@ -13,7 +13,7 @@ function Register() {
     const handleLogin = async () => {
         try {
             let res = await axios.post(`${config.API_URL}/user/create`, { name, email, password })
-            if (res.status === 200) {
+            if (res.status === 201) {
                 console.log(res.data.message)
                 toast.success(res.data.message)
                 navigate('/login');
