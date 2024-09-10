@@ -17,11 +17,12 @@ This project demonstrates how to implement a correct password reset flow with em
 
 ### Functionalities Used
 1. Utilized `react - bootstrap` to design the UI in a responsive way.
-2. Utilized `bcryptjs` for hashing and comparing the password.
-3. Utilized `jsonwebtoken` to create and decode token.
-4. Utilized `cors` to connect frontend and backend connectivity.
-5. Utilized `dotenv` to secure the environment variables.
-6. Utilized `nodemailer` a module for Node.js that allows to send emails from the server.
+2. Utilized `axios` to make HTTP requests from a web browser or Node.js
+3. Utilized `bcryptjs` for hashing and comparing the password.
+4. Utilized `jsonwebtoken` to create and decode token.
+5. Utilized `cors` to connect frontend and backend connectivity.
+6. Utilized `dotenv` to secure the environment variables.
+7. Utilized `nodemailer` a module for Node.js that allows to send emails from the server.
 
 ### API Endpoints
 #### FrontEnd URL:
