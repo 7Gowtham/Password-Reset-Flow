@@ -28,7 +28,7 @@ function Login() {
         <Form>
           <Form.Group className="mb-3" controlId="formUsername">
             <Form.Label>Username</Form.Label>
-            <Form.Control type="text" placeholder="Enter username" required onChange={(e)=>setEmail(e.target.value)}/>
+            <Form.Control type="text" placeholder="Enter email" required onChange={(e)=>setEmail(e.target.value)}/>
           </Form.Group>
 
           <Form.Group className="mb-3" controlId="formPassword">
