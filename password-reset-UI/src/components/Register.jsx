@@ -1,7 +1,7 @@
 import axios from 'axios'
 import React, { useState } from 'react'
 import toast from 'react-hot-toast'
-import { Form, Button, Card, Container} from 'react-bootstrap';
+import { Form, Button, Card, Container } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 
 function Register() {
@@ -10,10 +10,10 @@ function Register() {
     let [password, setPassword] = useState("")
     let navigate = useNavigate()
 
-    const handleLogin = async()=>{
+    const handleLogin = async () => {
         try {
-            let res = await axios.post(`${config.API_URL}/user/create`, {name, email, password})
-            if(res.status === 200){
+            let res = await axios.post(`${config.API_URL}/user/create`, { name, email, password })
+            if (res.status === 200) {
                 console.log(res.data.message)
                 toast.success(res.data.message)
                 navigate('/login');
@@ -25,9 +25,9 @@ function Register() {
                 toast.error('No response from the server. Please try again later.');
             } else {
                 toast.error('An error occurred. Please try again.');
+            }
         }
     }
-
     return <>
         <Container className="d-flex justify-content-center align-items-center min-vh-100">
             <Card style={{ width: '22rem' }} className="p-4 shadow-sm">
@@ -56,5 +56,4 @@ function Register() {
         </Container>
     </>
 }
-
 export default Register
